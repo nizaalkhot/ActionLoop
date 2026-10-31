@@ -36,3 +36,4 @@
 ## 🧪 Testing & Verification
 - **15 Automated Pytest Suites**: Full coverage for pipeline orchestration, resolution, deduplication, key rotation, deep idempotency, and cross-tenant security.
 - **40 Golden Transcripts Benchmark**: Real-world evaluation suite testing precision, recall, and rejection of negative discussion phrases.
+
