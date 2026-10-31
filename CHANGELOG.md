@@ -47,3 +47,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Jira, Asana, and GitHub Issues integration adapters.
 - Real-time bot integrations for Zoom, Google Meet, and Microsoft Teams.
 - Slack & email daily digests for upcoming due dates.
+
