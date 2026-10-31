@@ -28,34 +28,66 @@ Extracting action items from transcripts is a commodity (Otter, Fireflies, Fatho
 
 ---
 
-## 🚀 How ActionLoop Solves It
+## 🚀 Architecture & Pipeline Flow
 
-ActionLoop treats task extraction as a **mostly deterministic pipeline with structured LLM calls**, not an unpredictable free-roaming agent:
+ActionLoop operates as a **deterministic 6-stage pipeline with strict LLM structured output contracts**, avoiding unpredictable free-roaming agents:
 
+```mermaid
+flowchart TD
+    subgraph INGESTION["1. Input & Normalization"]
+        A["Raw Notes / Transcript<br/>(Paste, VTT, SRT)"] --> B["Normalizer Engine"]
+        B --> B1["Clean Timestamps & Noise"]
+        B --> B2["Map Speaker Labels to Attendees"]
+        B --> B3["Anchor Meeting Date & Timezone"]
+    end
+
+    subgraph LLM_STAGE["2. Grounded Extraction"]
+        B1 & B2 & B3 --> C["Gemini Flash Structured Outputs"]
+        C --> D{"Commitment vs Discussion?"}
+        D -- "Passive Idea / Musings" --> D1["Drop Candidate<br/>(Zero Hallucinations)"]
+        D -- "Explicit Commitment" --> E["Action Items + Verbatim Supporting Quotes"]
+    end
+
+    subgraph RESOLUTION["3. Resolution & Deduplication"]
+        E --> F["Resolver Engine"]
+        F --> F1["Spoken Name ➔ Workspace User ID"]
+        F --> F2["Relative Phrasing ➔ Absolute Calendar Date"]
+        F --> G["Deduplication Engine"]
+        G --> G1["Backlog Contrast Scoring & Duplicate Flags"]
+    end
+
+    subgraph REVIEW["4. Human-in-the-Loop Review"]
+        G1 --> H["30-Second Review UI"]
+        H --> H1["Side-by-Side Source Quote Drawer"]
+        H --> H2["One-Click Bulk Approve (>80% Conf)"]
+        H --> H3["Inline Edit, Reassign, or Reject"]
+    end
+
+    subgraph SYNC["5. Idempotent Push & Feedback"]
+        H --> I["Idempotent Dispatcher"]
+        I --> I1["DB Unique Constraint: (workspace_id, task_id)"]
+        I1 --> I2["External Lookup-Before-Retry"]
+        I2 --> J["Created Ticket in Linear / PM Tool<br/>(With Source Quote Backlink)"]
+        H3 --> K["Feedback Logger<br/>(Logs Edits & Rejections)"]
+    end
+
+    subgraph ACCOUNTABILITY["6. Closing The Loop"]
+        J --> L["Pre-Meeting Accountability Briefing"]
+        L --> M["Surface Slipped & Open Tasks Per Owner"]
+    end
 ```
-[Raw Transcript / Notes]
-         │
-         ▼
- 1. NORMALIZE    ──► Strip VTT/SRT noise, parse speaker labels, anchor meeting date & timezone
-         │
-         ▼
- 2. EXTRACT      ──► Pure Gemini Flash structured output with verbatim quote grounding
-         │           (Rejects passive discussion; enforces supporting_quote)
-         ▼
- 3. RESOLVE      ──► Map spoken names to verified workspace users; compute absolute deadlines
-         │           (Flags ambiguous first-name collisions; leaves unassigned if unknown)
-         ▼
- 4. DEDUPE       ──► Jaccard token overlap + Levenshtein contrast penalties against active backlog
-         │
-         ▼
- 5. REVIEW (UI)  ──► 30-second review screen with side-by-side transcript drawer & quick approve-all
-         │
-         ▼
- 6. PUSH & LEARN ──► Idempotent ticket creation (DB unique constraints + lookup-before-retry)
-         │           Logs all human edits/rejections to improve future resolution
-         ▼
- 7. CLOSE LOOP   ──► Pre-meeting accountability recaps surfacing slipped & open items per owner
-```
+
+### Pipeline Breakdown
+
+| Stage | Operation | Guarantees / Guardrails |
+| :--- | :--- | :--- |
+| **1. Normalize** | Cleans transcripts, extracts speakers, anchors meeting timezone | Deterministic cleanup; formats raw VTT/SRT into clean speaker turns |
+| **2. Extract** | Gemini Flash with `responseSchema` JSON validation | Requires verbatim `supporting_quote` for every item; rejects idle discussion |
+| **3. Resolve** | Maps names (*"Priya"*) to user IDs; computes dates (*"by Friday"*) | Flags duplicate first names as `is_ambiguous`; leaves unassigned if unknown |
+| **4. Dedupe** | Jaccard token overlap + Levenshtein contrast penalties | Flags duplicate candidates against active open backlog tickets |
+| **5. Review** | 30-second Next.js review screen | Rapid review with quote inspection drawer & one-click bulk approval |
+| **6. Push** | Dispatches tickets to Linear / Jira | DB-level unique constraints + external lookup-before-retry pattern |
+| **7. Close Loop**| Pre-meeting accountability recaps | Surfaces uncompleted and slipped items per person before the next meeting |
 
 ---
 
