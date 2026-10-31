@@ -1,0 +1,8 @@
+Marcus: Thanks for joining Acme Corp sync.
+Client Rep: We noticed our invoice exports are missing the VAT tax breakdown.
+Alex: I'll update the PDF generator to include the VAT tax breakdown line by next Monday.
+Client Rep: That would be fantastic. Also, do you think AI autofill is something we could do later this year?
+Marcus: It is definitely on our radar, but nothing committed yet.
+Sarah: I will set up the automated Datadog alerts for client invoice failures today.
+Marcus: Sounds good everyone.
+

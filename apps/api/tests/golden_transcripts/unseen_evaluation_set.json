@@ -1,0 +1,106 @@
+[
+  {
+    "id": "unseen_01",
+    "title": "Mobile Crash Report Sync",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Hey team, Crashlytics is lighting up with SIGSEGV errors on iOS 18.\nPriya: Yeah I saw that in the triage channel. I can take that one. I will push an iOS crash hotfix by tomorrow morning.\nMarcus: Legend, thank you Priya.\nAlex Chen: Should we roll back the last release?\nPriya: No need, it's just a nil pointer in the camera delegate.\nMarcus: Great, let's keep an eye on it.",
+    "expected_tasks": [
+      {"keywords": ["ios", "crash", "hotfix"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": ["roll back the last release"]
+  },
+  {
+    "id": "unseen_02",
+    "title": "Staging Deployment & Docs Sync",
+    "meeting_date": "2026-11-04",
+    "transcript": "Alex Chen: PR #182 for Redis caching is approved.\nSarah: Nice. When is it going out?\nAlex Chen: I'm on it, I will deploy the Redis caching PR to staging by Friday.\nSarah: Awesome. Count me in for updating the architecture documentation by end of next week.\nMarcus: Perfect teamwork.",
+    "expected_tasks": [
+      {"keywords": ["redis", "caching", "staging"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"},
+      {"keywords": ["architecture", "documentation"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-13"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "unseen_03",
+    "title": "Monolith vs Microservices Debate",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Quick discussion on whether to split the payments service into its own repo.\nSarah: I honestly think distributed transactions will give us way more headaches than benefits right now.\nAlex Chen: But on the other hand our build times are creeping past 20 minutes in the monolith.\nPriya: We could also look at Turborepo instead of multiple repos.\nMarcus: We are clearly split on this. Let's table this entire topic for our quarterly offsite, no action items today.",
+    "expected_tasks": [],
+    "negative_phrases": ["split the payments service", "distributed transactions", "look at Turborepo"]
+  },
+  {
+    "id": "unseen_04",
+    "title": "Enterprise SSO Client Call",
+    "meeting_date": "2026-11-04",
+    "transcript": "Client CTO: We can only roll out ActionLoop if you support Okta SAML.\nMarcus: We actually have SAML in beta right now.\nAlex Chen: Yeah, I'll email you the Okta SAML configuration guide by tomorrow.\nClient CTO: Can you also do SCIM provisioning?\nMarcus: SCIM is on our Q1 roadmap, we can't promise a date just yet.",
+    "expected_tasks": [
+      {"keywords": ["okta", "saml", "guide"], "expected_owner": "Alex Chen", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": ["SCIM provisioning"]
+  },
+  {
+    "id": "unseen_05",
+    "title": "Database Deadlock Investigation",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: We had 4 deadlock errors logged in Postgres yesterday during checkout spikes.\nAlex Chen: Let me circle back on the database deadlock logs and I will post an analysis report by Friday.\nMarcus: Sounds good. Let Sarah know if you need query traces.",
+    "expected_tasks": [
+      {"keywords": ["database", "deadlock", "analysis"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "unseen_06",
+    "title": "User Churn & Cancellation Survey",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Month-over-month churn jumped 0.8% in the starter tier.\nSarah: We don't even ask users why they cancel right now.\nSarah: I will draft the cancellation exit survey questions in Google Docs by Thursday.\nElena: I'll review the question flow on Friday.",
+    "expected_tasks": [
+      {"keywords": ["cancellation", "survey", "questions"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"},
+      {"keywords": ["review", "question flow"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "unseen_07",
+    "title": "Sales Sandbox Environment",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Sales team is demoing to Globex next week and needs dummy data.\nAlex Chen: I'll spin up a seeded demo sandbox environment for Globex by next Tuesday.\nMarcus: Great, make sure it has the new billing charts.",
+    "expected_tasks": [
+      {"keywords": ["demo", "sandbox", "globex"], "expected_owner": "Alex Chen", "expected_date": "2026-11-10"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "unseen_08",
+    "title": "Settings Page Design Review",
+    "meeting_date": "2026-11-04",
+    "transcript": "Elena: The settings page layout is too cramped on smaller screens.\nElena: I will update the settings page responsive layout in Figma by tomorrow.\nPriya: Ping me when done, I'll implement the CSS grid updates by Friday.",
+    "expected_tasks": [
+      {"keywords": ["settings", "responsive", "figma"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-05"},
+      {"keywords": ["css grid", "settings"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "unseen_09",
+    "title": "AWS Cloud Spend Spike",
+    "meeting_date": "2026-11-04",
+    "transcript": "Sarah: Our AWS bill was up $2,400 this month. Someone left 3 large EKS nodegroups running.\nSarah: I will shut down the orphaned development clusters today.\nMarcus: Can we set up a hard spending limit?\nSarah: I'll configure AWS budget alert notifications by tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["shut down", "clusters"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-04"},
+      {"keywords": ["budget", "alert", "notifications"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": ["set up a hard spending limit"]
+  },
+  {
+    "id": "unseen_10",
+    "title": "Penetration Testing Review",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Security consultants sent over their external pen test findings.\nAlex Chen: The only medium issue was wildcard Access-Control-Allow-Origin on the auth endpoint.\nAlex Chen: I will restrict the CORS headers to approved origins by Friday.\nSarah: I'll review the updated Nginx ingress configuration by next Monday.",
+    "expected_tasks": [
+      {"keywords": ["cors", "headers", "auth"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"},
+      {"keywords": ["nginx", "ingress"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-09"}
+    ],
+    "negative_phrases": []
+  }
+]
+

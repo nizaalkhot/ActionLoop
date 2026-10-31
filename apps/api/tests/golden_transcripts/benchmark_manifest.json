@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Sprint 14 Planning",
+    "transcript_file": "sprint_planning.txt",
+    "meeting_date": "2026-11-04",
+    "expected_tasks": [
+      {
+        "keywords": ["navigation", "drawer", "ios"],
+        "expected_owner": "Priya Sharma",
+        "expected_date": "2026-11-06"
+      },
+      {
+        "keywords": ["postgres", "pooling", "staging"],
+        "expected_owner": "Alex Chen",
+        "expected_date": "2026-11-05"
+      },
+      {
+        "keywords": ["figma", "component", "tokens"],
+        "expected_owner": "Priya Sharma",
+        "expected_date": "2026-11-11"
+      }
+    ]
+  },
+  {
+    "title": "Acme Corp Client Sync",
+    "transcript_file": "client_sync.txt",
+    "meeting_date": "2026-11-04",
+    "expected_tasks": [
+      {
+        "keywords": ["invoice", "vat", "pdf"],
+        "expected_owner": "Alex Chen",
+        "expected_date": "2026-11-09"
+      },
+      {
+        "keywords": ["datadog", "alerts", "invoice failures"],
+        "expected_owner": "Sarah Jenkins",
+        "expected_date": "2026-11-04"
+      }
+    ]
+  },
+  {
+    "title": "Incident INC-492 Postmortem",
+    "transcript_file": "incident_postmortem.txt",
+    "meeting_date": "2026-11-04",
+    "expected_tasks": [
+      {
+        "keywords": ["rds", "replica", "iops"],
+        "expected_owner": "Sarah Jenkins",
+        "expected_date": "2026-11-05"
+      },
+      {
+        "keywords": ["rate", "limiting", "search"],
+        "expected_owner": "Alex Chen",
+        "expected_date": "2026-11-06"
+      },
+      {
+        "keywords": ["failover", "playbook", "notion"],
+        "expected_owner": "Sarah Jenkins",
+        "expected_date": "2026-11-06"
+      }
+    ]
+  }
+]
+

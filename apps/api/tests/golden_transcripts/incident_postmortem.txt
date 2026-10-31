@@ -1,0 +1,7 @@
+Marcus: Postmortem for incident INC-492 database saturation.
+Sarah: I will increase the RDS read replica provisioned IOPS by tomorrow.
+Alex: I'll add rate limiting on the public API search endpoint by Friday.
+Priya: Maybe we could refactor the entire frontend search component someday.
+Marcus: Let's focus on the P0 stability items first.
+Sarah: Understood. I'll document the failover playbook in Notion by end of week.
+

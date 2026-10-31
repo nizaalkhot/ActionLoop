@@ -1,0 +1,10 @@
+Marcus: Welcome everyone to the sprint 14 kickoff. Quick note, coffee machine is fixed on the 3rd floor.
+Priya: Great to hear! Regarding the mobile nav bug, I will fix the navigation drawer overlap on iOS by Friday.
+Marcus: Awesome, thank you Priya.
+Alex: I'll optimize the Postgres database connection pooling and deploy it to staging tomorrow.
+Sarah: We should probably look into upgrading our Kubernetes clusters next quarter.
+Marcus: Yeah, let's keep that in mind for Q4 roadmap, no action for now.
+Alex: Also, Priya, can you send the updated Figma component tokens to Sarah by Wednesday?
+Priya: Yes, I'll send the tokens over.
+Marcus: Perfect, let's wrap up.
+

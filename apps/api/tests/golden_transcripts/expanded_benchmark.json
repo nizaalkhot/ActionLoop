@@ -1,0 +1,327 @@
+[
+  {
+    "id": "case_01",
+    "title": "Sprint 14 Engineering Kickoff",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Standup time. Coffee machine is fixed.\nPriya: Regarding the mobile nav bug, I will fix the navigation drawer overlap on iOS by Friday.\nAlex Chen: I'll optimize the Postgres database connection pooling and deploy it to staging tomorrow.\nSarah: We should probably look into upgrading our Kubernetes clusters next quarter.\nMarcus: Yeah, let's keep that in mind for Q4 roadmap, no action for now.",
+    "expected_tasks": [
+      {"keywords": ["navigation", "drawer", "ios"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-06"},
+      {"keywords": ["postgres", "pooling", "staging"], "expected_owner": "Alex Chen", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": ["upgrading our Kubernetes clusters next quarter"]
+  },
+  {
+    "id": "case_02",
+    "title": "Acme Corp Client Sync",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Thanks for joining Acme Corp sync.\nClient Rep: We noticed our invoice exports are missing the VAT tax breakdown.\nAlex Chen: I'll update the PDF generator to include the VAT tax breakdown line by next Monday.\nClient Rep: That would be fantastic. Also, do you think AI autofill is something we could do later this year?\nMarcus: It is definitely on our radar, but nothing committed yet.\nSarah: I will set up the automated Datadog alerts for client invoice failures today.",
+    "expected_tasks": [
+      {"keywords": ["pdf", "vat", "invoice"], "expected_owner": "Alex Chen", "expected_date": "2026-11-09"},
+      {"keywords": ["datadog", "alerts", "invoice"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-04"}
+    ],
+    "negative_phrases": ["AI autofill is something we could do later this year"]
+  },
+  {
+    "id": "case_03",
+    "title": "Incident INC-492 Postmortem",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Postmortem for incident INC-492 database saturation.\nSarah: I will increase the RDS read replica provisioned IOPS by tomorrow.\nAlex Chen: I'll add rate limiting on the public API search endpoint by Friday.\nPriya: Maybe we could refactor the entire frontend search component someday.\nMarcus: Let's focus on the P0 stability items first.\nSarah: Understood. I'll document the failover playbook in Notion by end of week.",
+    "expected_tasks": [
+      {"keywords": ["rds", "replica", "iops"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"},
+      {"keywords": ["rate", "limiting", "search"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"},
+      {"keywords": ["failover", "playbook", "notion"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": ["refactor the entire frontend search component someday"]
+  },
+  {
+    "id": "case_04",
+    "title": "Weak Commitment & Look-into-it Test",
+    "meeting_date": "2026-11-05",
+    "transcript": "Marcus: Did anyone check why customer onboarding drop-off increased?\nAlex Chen: I'll look into the onboarding analytics funnel by tomorrow EOD.\nPriya: We should probably overhaul the welcome email sequence eventually.\nMarcus: Let's hold off on emails until Alex finishes the funnel check.",
+    "expected_tasks": [
+      {"keywords": ["onboarding", "analytics", "funnel"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": ["overhaul the welcome email sequence eventually"]
+  },
+  {
+    "id": "case_05",
+    "title": "Non-Commitment Filter Test",
+    "meeting_date": "2026-11-05",
+    "transcript": "Marcus: Any general thoughts on improving developer experience?\nSarah: We should probably use pnpm instead of npm.\nPriya: In my opinion, our PR review turnaround time is too slow.\nAlex Chen: It might be nice to have automated preview environments someday.\nMarcus: Great discussion, let's wrap up with no new action items.",
+    "expected_tasks": [],
+    "negative_phrases": ["use pnpm instead of npm", "turnaround time is too slow", "automated preview environments"]
+  },
+  {
+    "id": "case_06",
+    "title": "Same First Name Ambiguity Test",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: We have both Alex Chen and Alex Miller here.\nMarcus: Alex, can you update the Datadog dashboard by tomorrow?\nPriya: I will review the pull request by tonight.",
+    "expected_tasks": [
+      {"keywords": ["datadog", "dashboard"], "expected_owner": null, "expected_date": "2026-11-05"},
+      {"keywords": ["pull request"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-04"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_07",
+    "title": "Unassigned Ownership Test",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: The staging SSL certificate expires on Sunday.\nMarcus: Someone needs to renew the SSL certificate by Friday.\nSarah: I will take the lead on alerting setup today.",
+    "expected_tasks": [
+      {"keywords": ["renew", "ssl", "certificate"], "expected_owner": null, "expected_date": "2026-11-06"},
+      {"keywords": ["alerting", "setup"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-04"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_08",
+    "title": "Friday Late Night Timezone Boundary",
+    "meeting_date": "2026-11-06T23:30:00-05:00",
+    "transcript": "Sarah: It's late Friday night.\nSarah: I will run the staging database vacuum tomorrow.\nAlex Chen: I'll verify the backup restore by next Monday.",
+    "expected_tasks": [
+      {"keywords": ["vacuum", "staging"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-07"},
+      {"keywords": ["backup", "restore"], "expected_owner": "Alex Chen", "expected_date": "2026-11-09"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_09",
+    "title": "Crosstalk & Interruption Resolution",
+    "meeting_date": "2026-11-04",
+    "transcript": "Alex Chen: I was thinking about the websocket connection...\nPriya: Wait Alex, before that, can you fix the broken staging build?\nAlex Chen: Yeah, I'll fix the broken staging build today.\nPriya: Thanks, and I will publish the release notes tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["broken", "staging", "build"], "expected_owner": "Alex Chen", "expected_date": "2026-11-04"},
+      {"keywords": ["release", "notes"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": ["thinking about the websocket connection"]
+  },
+  {
+    "id": "case_10",
+    "title": "Security Vulnerability Triage",
+    "meeting_date": "2026-11-04",
+    "transcript": "Sarah: Snyk reported a high severity CVE in our xml parsing dependency.\nSarah: I will patch the xml2js library and deploy to production tomorrow.\nMarcus: Should we audit all npm packages?\nAlex Chen: I'll audit our top 10 external dependencies by Friday.",
+    "expected_tasks": [
+      {"keywords": ["patch", "xml2js", "production"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"},
+      {"keywords": ["audit", "dependencies"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": ["audit all npm packages"]
+  },
+  {
+    "id": "case_11",
+    "title": "Frontend Design System Sync",
+    "meeting_date": "2026-11-04",
+    "transcript": "Elena: The typography scale is finalized in Figma.\nElena: I will export the design tokens to JSON by tomorrow.\nPriya: I'll integrate the new tokens into Tailwind config by Friday.\nMarcus: It might be cool to create a public styleguide site later.",
+    "expected_tasks": [
+      {"keywords": ["design tokens", "json"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-05"},
+      {"keywords": ["tailwind", "tokens"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": ["public styleguide site later"]
+  },
+  {
+    "id": "case_12",
+    "title": "Billing Webhook Retries",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Stripe webhooks failed for 3 enterprise subscriptions.\nAlex Chen: I'll implement an exponential backoff retry queue by tomorrow.\nSarah: I will add dead-letter queue metrics in CloudWatch by Friday.",
+    "expected_tasks": [
+      {"keywords": ["exponential", "backoff", "retry"], "expected_owner": "Alex Chen", "expected_date": "2026-11-05"},
+      {"keywords": ["dead-letter", "cloudwatch"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_13",
+    "title": "Mobile App Release 2.4",
+    "meeting_date": "2026-11-04",
+    "transcript": "Priya: Apple App Store rejected version 2.4 for missing privacy manifest.\nPriya: I will generate the Apple privacy manifest file today.\nMarcus: When can we submit to Google Play?\nPriya: I'll submit the Android bundle by Thursday.",
+    "expected_tasks": [
+      {"keywords": ["privacy manifest", "apple"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-04"},
+      {"keywords": ["submit", "android", "bundle"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_14",
+    "title": "Customer Support Escalation",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: VIP customer Omega Corp can't invite new team members.\nAlex Chen: I'll debug the organization member invite permission check today.\nElena: I'll review the invite modal error states by tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["debug", "invite", "permission"], "expected_owner": "Alex Chen", "expected_date": "2026-11-04"},
+      {"keywords": ["invite modal", "error states"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_15",
+    "title": "API Rate Limiting & Quota",
+    "meeting_date": "2026-11-04",
+    "transcript": "Sarah: Public API usage spiked 400% from web scrapers.\nSarah: I will deploy Redis-backed sliding window rate limiter by tomorrow.\nAlex Chen: I'll notify impacted API key owners by Friday.",
+    "expected_tasks": [
+      {"keywords": ["redis", "rate limiter"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"},
+      {"keywords": ["notify", "api key owners"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_16",
+    "title": "Performance Optimization & LCP",
+    "meeting_date": "2026-11-04",
+    "transcript": "Priya: Google Lighthouse score dropped to 62 on marketing home.\nPriya: I will compress hero WebP assets and defer third-party scripts by Friday.\nElena: I'll provide optimized SVG illustrations tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["compress", "hero", "scripts"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-06"},
+      {"keywords": ["optimized", "svg"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_17",
+    "title": "GDPR Compliance Request",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: A European customer filed an Article 17 right to erasure request.\nAlex Chen: I will write a script to scrub user personal data from database tables by Friday.\nSarah: I'll verify the data is purged from S3 backup archives by next Monday.",
+    "expected_tasks": [
+      {"keywords": ["scrub", "personal data"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"},
+      {"keywords": ["purged", "backup"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-09"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_18",
+    "title": "CI/CD Pipeline Optimization",
+    "meeting_date": "2026-11-04",
+    "transcript": "Sarah: GitHub Actions workflow takes 28 minutes to run.\nSarah: I will enable Docker build caching and parallelize unit tests by Thursday.\nMarcus: It would be nice if builds were under 5 minutes.",
+    "expected_tasks": [
+      {"keywords": ["docker", "cache", "parallelize"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": ["builds were under 5 minutes"]
+  },
+  {
+    "id": "case_19",
+    "title": "Search Query Latency",
+    "meeting_date": "2026-11-04",
+    "transcript": "Alex Chen: Full-text search queries are hitting sequential scans.\nAlex Chen: I'll add a GIN index on the documents tsvector column tomorrow.\nPriya: I will add debouncing to the search input on the frontend today.",
+    "expected_tasks": [
+      {"keywords": ["gin", "index", "tsvector"], "expected_owner": "Alex Chen", "expected_date": "2026-11-05"},
+      {"keywords": ["debouncing", "search input"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-04"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_20",
+    "title": "Email Deliverability & DMARC",
+    "meeting_date": "2026-11-04",
+    "transcript": "Sarah: Mailgun reported DKIM alignment failures for new workspace invites.\nSarah: I will update the DNS DMARC and DKIM records today.\nMarcus: Make sure Priya checks the invite email copy.\nPriya: I'll review the invite email text by tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["dns", "dmarc", "dkim"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-04"},
+      {"keywords": ["invite email", "copy"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_21",
+    "title": "Database Connection Pool Exhaustion",
+    "meeting_date": "2026-11-04",
+    "transcript": "Alex Chen: PgBouncer ran out of server connections during morning traffic.\nAlex Chen: I will tune max_client_conn and pool_size in pgbouncer.ini today.\nSarah: I'll set up automated alerts for pool queue depth by tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["pgbouncer", "pool_size"], "expected_owner": "Alex Chen", "expected_date": "2026-11-04"},
+      {"keywords": ["alerts", "pool queue"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_22",
+    "title": "Dark Mode Support",
+    "meeting_date": "2026-11-04",
+    "transcript": "Elena: Users have been requesting dark mode.\nElena: I will prepare the dark mode color tokens in Figma by Friday.\nPriya: I'll add the Tailwind dark: classes to common components next week.\nMarcus: Dark mode is going to look awesome.",
+    "expected_tasks": [
+      {"keywords": ["dark mode", "tokens", "figma"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-06"},
+      {"keywords": ["tailwind", "dark"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-09"}
+    ],
+    "negative_phrases": ["Dark mode is going to look awesome"]
+  },
+  {
+    "id": "case_23",
+    "title": "GraphQL N+1 Query Fix",
+    "meeting_date": "2026-11-04",
+    "transcript": "Alex Chen: The project tasks query executes 150 SQL queries for 10 users.\nAlex Chen: I will batch user loader lookups using DataLoader by tomorrow.\nMarcus: Good catch.",
+    "expected_tasks": [
+      {"keywords": ["dataloader", "batch"], "expected_owner": "Alex Chen", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_24",
+    "title": "Staging Environment Reset",
+    "meeting_date": "2026-11-04",
+    "transcript": "Sarah: Staging database is polluted with test seed data.\nSarah: I will write an automated nightly database sanitization script by Thursday.\nMarcus: That will save everyone time.",
+    "expected_tasks": [
+      {"keywords": ["sanitization", "staging"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_25",
+    "title": "Multi-Factor Authentication (MFA)",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Enterprise clients require TOTP MFA for admin accounts.\nAlex Chen: I will implement the TOTP QR code generator endpoint by Friday.\nPriya: I'll build the MFA verification screen in the web app next week.",
+    "expected_tasks": [
+      {"keywords": ["totp", "qr code", "endpoint"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"},
+      {"keywords": ["mfa verification", "screen"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-09"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_26",
+    "title": "Customer Onboarding Survey",
+    "meeting_date": "2026-11-04",
+    "transcript": "Elena: We want to collect feedback on user role selection.\nElena: I will design the 2-question modal in Figma by tomorrow.\nPriya: I will trigger the modal after user sign-in by Friday.",
+    "expected_tasks": [
+      {"keywords": ["design", "modal", "figma"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-05"},
+      {"keywords": ["trigger", "modal", "sign-in"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-06"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_27",
+    "title": "Data Warehouse Export",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: The analytics team needs daily event dumps in Snowflake.\nSarah: I will set up an Airbyte sync pipeline to S3 by Friday.\nAlex Chen: I'll verify the JSON schema format tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["airbyte", "sync", "s3"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-06"},
+      {"keywords": ["verify", "schema", "format"], "expected_owner": "Alex Chen", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_28",
+    "title": "Frontend Accessibility (a11y)",
+    "meeting_date": "2026-11-04",
+    "transcript": "Priya: Screen readers fail to announce form validation errors.\nPriya: I will add aria-live and aria-describedby attributes to all form fields by Thursday.\nElena: I'll verify contrast ratios on disabled buttons tomorrow.",
+    "expected_tasks": [
+      {"keywords": ["aria-live", "form fields"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-05"},
+      {"keywords": ["contrast ratios", "buttons"], "expected_owner": "Elena Rostova", "expected_date": "2026-11-05"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_29",
+    "title": "Slack Integration Webhook",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Customers want incident alerts posted directly to their Slack channels.\nAlex Chen: I will build the Slack incoming webhook dispatch service by Friday.\nPriya: I'll add the Slack webhook configuration URL field in project settings next week.",
+    "expected_tasks": [
+      {"keywords": ["slack", "incoming webhook"], "expected_owner": "Alex Chen", "expected_date": "2026-11-06"},
+      {"keywords": ["webhook configuration", "settings"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-09"}
+    ],
+    "negative_phrases": []
+  },
+  {
+    "id": "case_30",
+    "title": "Roadmap Wrap-up with Speculation",
+    "meeting_date": "2026-11-04",
+    "transcript": "Marcus: Great quarter everyone.\nMarcus: We should probably consider expanding into European data centers next year.\nAlex Chen: Maybe we should also rewrite our backend in Go.\nSarah: I will produce the infrastructure cost breakdown report by Friday.\nPriya: And I'll fix the checkout modal crash today.",
+    "expected_tasks": [
+      {"keywords": ["cost breakdown", "report"], "expected_owner": "Sarah Jenkins", "expected_date": "2026-11-06"},
+      {"keywords": ["checkout modal", "crash"], "expected_owner": "Priya Sharma", "expected_date": "2026-11-04"}
+    ],
+    "negative_phrases": ["expanding into European data centers next year", "rewrite our backend in Go"]
+  }
+]
+
