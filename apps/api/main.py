@@ -30,10 +30,21 @@ async def lifespan(app: FastAPI):
     yield
     # Shutdown tasks (if any)
 
+tags_metadata = [
+    {"name": "meetings", "description": "Ingest and process meeting transcripts."},
+    {"name": "tasks", "description": "Review, edit, approve, reject, and idempotently push candidate tasks."},
+    {"name": "auth", "description": "Linear OAuth 2.0 multi-tenant authorization and encrypted token management."},
+    {"name": "recap", "description": "Pre-meeting accountability briefings, surfacing open and slipped tasks per owner."},
+    {"name": "evaluation", "description": "Golden benchmark suite evaluating LLM extraction accuracy across 40 real-world scenarios."},
+    {"name": "workspace", "description": "Workspace member roster and directory management."},
+]
+
 app = FastAPI(
     title="ActionLoop API",
-    description="Production-grade pipeline turning messy transcripts into deduplicated project management tasks.",
-    version="1.2.0",
+    summary="Turn messy meeting transcripts into deduplicated, owner-resolved tasks.",
+    description="Production-grade 6-stage pipeline powered by Gemini Flash structured outputs, multi-tenant isolation, Fernet token encryption, and pre-meeting accountability briefings.",
+    version="1.0.0",
+    openapi_tags=tags_metadata,
     lifespan=lifespan
 )
 

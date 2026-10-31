@@ -1,6 +1,7 @@
 {
-  "name": "meeting-notes-to-tasks-web",
-  "version": "0.1.0",
+  "name": "actionloop-web",
+  "version": "1.0.0",
+  "description": "ActionLoop: Transforming messy meeting notes into deduplicated, owner-resolved tasks with human review.",
   "private": true,
   "scripts": {
     "dev": "next dev",
